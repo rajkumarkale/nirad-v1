@@ -11,7 +11,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     UnauthenticatedComponent,
-    RegisterComponent,
     LoginComponent
   ],
   imports: [
@@ -30,7 +29,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
           },
           {
             path: 'register',
-            component: RegisterComponent
+            loadChildren: () => import('./register/register.module').then(m => m.RegisterModule)
           },
           {
             path: 'login',

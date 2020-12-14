@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Subscription} from 'rxjs';
-import * as _ from 'lodash';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
   public contactNumberError: string;
   private valueChangeSubscription: Subscription;   // Form change event listener
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.InitForm();
@@ -71,6 +71,7 @@ export class RegisterComponent implements OnInit {
   }
 
   public onFormSubmit(){
+    this.router.navigate(['unauthenticated/register/verify-email']);
     console.log(this.registerForm.value);
   }
 }
