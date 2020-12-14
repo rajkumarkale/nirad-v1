@@ -4,20 +4,19 @@ import { UnauthenticatedComponent } from './unauthenticated.component';
 import { RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TranslateModule} from '@ngx-translate/core';
-
 
 
 @NgModule({
   declarations: [
     UnauthenticatedComponent,
-    RegisterComponent,
     LoginComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild([
       {
         path: '',
@@ -30,7 +29,7 @@ import {TranslateModule} from '@ngx-translate/core';
           },
           {
             path: 'register',
-            component: RegisterComponent
+            loadChildren: () => import('./register/register.module').then(m => m.RegisterModule)
           },
           {
             path: 'login',
