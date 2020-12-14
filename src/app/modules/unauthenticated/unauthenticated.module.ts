@@ -4,6 +4,7 @@ import { UnauthenticatedComponent } from './unauthenticated.component';
 import { RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 
@@ -15,6 +16,8 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forChild([
       {
         path: '',
