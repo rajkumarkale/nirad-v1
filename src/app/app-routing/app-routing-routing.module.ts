@@ -9,10 +9,10 @@ export const routes: Routes = [{
         {
           path: '',
           pathMatch: 'full',
-          redirectTo: 'unauthenticated'
+          redirectTo: 'access'
         },
          {
-          path: 'unauthenticated',
+          path: 'access',
            loadChildren: () => import('./../modules/unauthenticated/unauthenticated.module').then(m => m.UnauthenticatedModule)
          }
         ]

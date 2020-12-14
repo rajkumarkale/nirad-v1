@@ -4,6 +4,8 @@ import { UnauthenticatedComponent } from './unauthenticated.component';
 import { RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import {FormsModule} from '@angular/forms';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 
@@ -15,6 +17,7 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule.forChild([
       {
         path: '',
@@ -35,7 +38,8 @@ import { LoginComponent } from './login/login.component';
           }
         ]
       }
-    ])
+    ]),
+    TranslateModule
   ]
 })
 export class UnauthenticatedModule { }

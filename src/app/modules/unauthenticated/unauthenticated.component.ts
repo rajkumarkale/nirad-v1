@@ -14,10 +14,10 @@ export class UnauthenticatedComponent implements OnInit {
   }
 
   gotoLogin() {
-      this.router.navigate(['unauthenticated/login']);
+      this.router.navigate(['access/login']);
   }
 
   gotoRegister() {
-    this.router.navigate(['unauthenticated/register']);
+    this.router.navigate(['access/register']);
   }
 }
