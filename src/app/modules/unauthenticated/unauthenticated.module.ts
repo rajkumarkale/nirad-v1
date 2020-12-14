@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -37,7 +37,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
           }
         ]
       }
-    ])
+    ]),
+    TranslateModule
   ]
 })
 export class UnauthenticatedModule { }
