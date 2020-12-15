@@ -1,0 +1,30 @@
+:host {
+  .register-hr-line-separator-top {
+    top:15px;
+  }
+
+  .register-hr-line-separator {
+    top:-15px;left: 50%
+  }
+
+  .register-form {
+
+    .register-form-field-label {
+      font-size:12px;
+      font-weight:600;
+    }
+
+    .register-form-register-ack {
+      font-size: 11px;
+
+      .register-form-register-ack-policy {
+        color: blue;
+        cursor: pointer;
+      }
+    }
+
+    .register-already-registered {
+      font-size: 12px;
+    }
+  }
+}
