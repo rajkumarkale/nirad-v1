@@ -1,3 +1,17 @@
 {
-  "name": "Name"
+  "app.register.help.content.getStartedFree": "Get Started for FREE.",
+  "app.register.help.content.registerWithBusinessInfo": "Register with business information",
+  "app.register.btn.signUpWithGoogle": "Sign up with Google",
+  "app.register.btn.signUpWithMicrosoft": "Sign up with Microsoft",
+  "app.register.form.firstName": "First Name",
+  "app.register.form.firstName.help": "John",
+  "app.register.form.lastName": "Last Name",
+  "app.register.form.lastName.help": "Doe",
+  "app.register.form.companyName": "Company Name",
+  "app.register.form.companyName.help": "Google Inc",
+  "app.register.form.businessEmail": "Business Email Address",
+  "app.register.form.businessEmail.help": "john.doe@business.com",
+  "app.register.form.contactNumber": "Contact Number",
+  "app.register.form.contactHelp": "90 +++++++++"
+
 }
