@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RegisterComponent } from './register.component';
+import {PasswordComponent} from './password/password.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
-
+import {LoginComponent} from './login.component';
 
 
 
 @NgModule({
-  declarations: [RegisterComponent],
+  declarations: [PasswordComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -16,13 +16,13 @@ import {RouterModule} from '@angular/router';
     RouterModule.forChild([
       {
         path: '',
-        component: RegisterComponent,
+        component: LoginComponent,
       },
       {
-        path: 'verify-email',
-        loadChildren: () => import('./verify-email/verify-email.module').then(m => m.VerifyEmailModule)
+        path: 'password',
+        loadChildren: () => import('./password/password.module').then(m => m.PasswordModule)
       }
     ])
   ]
 })
-export class RegisterModule { }
+export class LoginModule { }

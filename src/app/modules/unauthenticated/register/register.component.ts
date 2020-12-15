@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
       lastName: ['', [Validators.required]],
       businessEmailId: [ '' , [Validators.required, Validators.pattern(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{3,4})$/)]],
       companyName: ['', [Validators.required]],
-      contactNumber: ['', [Validators.required, Validators.pattern(/^-?(0|[1-9]\d*)?$/)]],
+      contactNumber: [''],
       termPolicy: false,
     });
     this.firstNameFormControl = (this.registerForm.get('firstName') as FormControl);
@@ -71,7 +71,7 @@ export class RegisterComponent implements OnInit {
   }
 
   public onFormSubmit(){
-    this.router.navigate(['unauthenticated/register/verify-email']);
+    this.router.navigate(['access/register/verify-email']);
     console.log(this.registerForm.value);
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserType } from './login.enum';
 import { IUser } from './login.interfaces';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,10 +11,15 @@ import { IUser } from './login.interfaces';
 export class LoginComponent implements OnInit {
 
   public user: IUser = {type: '', name: '', contact: 9090909};
-  constructor() { }
+  public productName = 'Saas Product Name';
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.user.type = UserType.Primary;
+  }
+
+  submitForm(){
+    this.router.navigate(['access/login/password']);
   }
 
 }
