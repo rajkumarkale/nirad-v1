@@ -71,7 +71,7 @@ export class RegisterComponent implements OnInit {
   }
 
   public onFormSubmit(){
-    this.router.navigate(['unauthenticated/register/verify-email']);
+    this.router.navigate(['access/register/verify-email']);
     console.log(this.registerForm.value);
   }
 }
