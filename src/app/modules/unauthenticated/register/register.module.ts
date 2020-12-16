@@ -2,12 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import {RouterModule} from '@angular/router';
 import {UnauthenticatedComponent} from '../unauthenticated.component';
 import {LoginComponent} from '../login/login.component';
 import {TranslateModule} from '@ngx-translate/core';
-
 
 
 @NgModule({

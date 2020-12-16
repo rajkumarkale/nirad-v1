@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UnauthenticatedComponent } from './unauthenticated.component';
 import { RouterModule } from '@angular/router';
-import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TranslateModule} from '@ngx-translate/core';
@@ -11,7 +10,7 @@ import {TranslateModule} from '@ngx-translate/core';
 @NgModule({
   declarations: [
     UnauthenticatedComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     CommonModule,
@@ -33,7 +32,7 @@ import {TranslateModule} from '@ngx-translate/core';
           },
           {
             path: 'login',
-            component: LoginComponent
+            loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
           }
         ]
       }
